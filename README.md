@@ -1,0 +1,3 @@
+# configVim
+# configVim
+# vimConfig
