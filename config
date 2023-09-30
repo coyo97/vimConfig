@@ -1,0 +1,64 @@
+" para habilitar
+set nocompatible
+filetype off
+set rtp+=/home/coyo/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle.vim'
+"para dar una bonita apriencia
+Plugin 'gruvbox-community/gruvbox'
+"
+Plugin 'vim-airline/vim-airlin'
+"para dezplazaminto de directorio
+Plugin 'preservim/nerdtree'
+"para sintaxis
+Plugin 'vim-syntastic/syntastic'
+"
+"Plugin 'ycm-core/YouCompleteMe'
+"
+""Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'yggdrot/identline'
+"sintaxi multilenguaje
+Plugin 'sheerun/vim-polyglot'
+"
+Plugin 'HerringtonDarkholme/yats.vim'
+""code hint
+""Plugin 'neoclide/coc.nvim'
+
+
+call vundle#end()
+filetype plugin indent on
+
+"number line
+set number
+set relativenumber
+
+"background
+set background=dark
+"tabulations
+set tabstop=4
+"window division
+set splitbelow
+set splitright
+"Aislar una serie de configuraciones para un fichero especifico, ejemplo html
+"para que el tab no tenga 4 espacios. estas configuraciones solo daran para
+"html
+
+autocmd FileType html set tabstop=2 | set shiftwidth=2 | set expandtab
+
+"active syntax
+syntax on
+
+
+"explore fichero
+map z :30Vexplore <CR>
+"Colorscheme
+colorscheme gruvbox
+"activate leftover
+set cursorline
+
+"configure nerdtree
+map <F3> :NERDTreeToggle<CR>
+
+" Configuración de YouCompleteMe (YCM)
+""let g:ycm_python_binary_path = '/usr/bin/python3.9'
